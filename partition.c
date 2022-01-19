@@ -14,12 +14,12 @@ void	swap_ary_elem(int *a_ptr, int *b_ptr)
 	*b_ptr = tmp;
 }
 
-int	partition(int *ary, size_t i_head, size_t i_tail)
+int	partition(int *ary, ssize_t i_head, ssize_t i_tail)
 {
 	t_partition index;
-	int			pivot;
+	ssize_t		pivot;
 
-	index.i = (int)i_head - 1;
+	index.i = i_head - 1;
 	index.j = i_head;
 	pivot = ary[i_tail];
 	while (index.j <= i_tail)
