@@ -1,4 +1,9 @@
-#include <header.h>
+typedef struct	s_partition
+{
+	int	i;
+	int	j;
+	int x;
+}				t_partition;
 
 void	swap_ary_elem(int *a_ptr, int *b_ptr)
 {
@@ -9,15 +14,15 @@ void	swap_ary_elem(int *a_ptr, int *b_ptr)
 	*b_ptr = tmp;
 }
 
-int	partition(int *ary, size_t start, size_t pivot_i)
+int	partition(int *ary, size_t i_head, size_t i_tail)
 {
 	t_partition index;
 	int			pivot;
 
-	index.i = (int)start - 1;
-	index.j = start;
-	pivot = ary[pivot_i];
-	while (index.j <= pivot_i)
+	index.i = (int)i_head - 1;
+	index.j = i_head;
+	pivot = ary[i_tail];
+	while (index.j <= i_tail)
 	{
 		if (ary[index.j] <= pivot)
 		{
