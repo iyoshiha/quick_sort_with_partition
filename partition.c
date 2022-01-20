@@ -1,9 +1,4 @@
-typedef struct	s_partition
-{
-	int	i;
-	int	j;
-	int x;
-}				t_partition;
+#include "header.h"
 
 void	swap_ary_elem(int *a_ptr, int *b_ptr)
 {
