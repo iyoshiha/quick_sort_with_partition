@@ -4,16 +4,23 @@
 #include <stdio.h>
 #include <unistd.h>
 
+typedef struct	s_card
+{
+	int		number;
+	char	suit;
+
+}				t_card;
 int	main(void)
 {
 	int *ary;
 	int border;
 	int len;
 	int index;
+	t_card card;
 
 	scanf("%d", &len);
 	index = len -1;
-	ary = malloc(sizeof(int) * len);
+	card = malloc(sizeof(int) * len);
 	for (int i = 0; i < len; i++)
 		scanf("%d", &ary[i]);
 	// border = partition(ary, 0, index);
